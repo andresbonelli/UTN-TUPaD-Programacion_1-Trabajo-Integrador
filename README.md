@@ -53,3 +53,7 @@ Fibonacci optimizado: Resultado=832040, Tiempo=0.00000095 segundos.
 Se utilizó la librería _time_ para mediciones simples de rendimiento.
 
 Para n > 35, el algoritmo recursivo se vuelve impráctico por su complejidad exponencial.
+
+## ▶️ Link al video explicativo
+
+https://www.youtube.com/watch?v=o6Weov3TFaY
