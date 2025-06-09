@@ -5,8 +5,6 @@ def fibo_recursivo(n):
     Genera numeros de Fibonacci usando recursión.
     La complejidad de tiempo es exponencial O(2^n) debido a la recursión repetida.
     La complejidad espacial aumenta tambien exponencialmente por la pila de llamadas.
-    :param n:
-    :return:
     """
     try:
         if n == 0: return 0
@@ -23,8 +21,6 @@ def fibo_memoizacion(n):
     La complejidad temporal es 0(n), ya que cada numero de Fibonacci es calculado solo una vez, reduciendo
     significativamente el tiempo de ejecución. Sin embargo, tambien usa recursion,
     con lo cual se puede llegar a alcanzar el limite de pila de llamadas en numeros muy altos.
-    :param n:
-    :return:
     """
     try:
         memo = {0: 0, 1: 1}
@@ -48,8 +44,6 @@ def fibo_tabulacion(n):
     el numero pasado como parametro, almacenando los resultados en una lista.
     La complejidad temporal es lineal 0(n) ya que no usamos recursion, y la compliejidad espacial
     tambien es 0(n) ya que vamos almacenando la lista completa.
-    :param n:
-    :return:
     """
     if n < 2: return n
     tab = [0, 1]
@@ -65,8 +59,6 @@ def fibo_optimizado(n):
     sin necesidad de cacheo. Tiene complejidad temporal 0(n) al igual que el uso de memo,
     pero complejidad espacial constante 0(1) ya que solo se almacenan los ultimos 2 numeros computados
     en lugar de la secuencia completa.
-    :param n:
-    :return:
     """
     if n < 2: return n
     a, b = 0, 1
@@ -76,10 +68,10 @@ def fibo_optimizado(n):
     return b
 
 def medir_tiempo(funcion, *args):
- inicio = time.time()
- resultado = funcion(*args)
- fin = time.time()
- return resultado, fin - inicio
+    inicio = time.time()
+    resultado = funcion(*args)
+    fin = time.time()
+    return resultado, fin - inicio
 
 if __name__ == "__main__":
     # Definimos la posicion en la serie de Fibonacci que queremos calcular
