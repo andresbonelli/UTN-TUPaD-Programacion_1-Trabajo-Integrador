@@ -13,7 +13,7 @@ def fibo_recursivo(n):
         if n == 1: return 1
         return fibo_recursivo(n - 1) + fibo_recursivo(n - 2)
     except RecursionError:
-        print(f'[recursiveFib ERROR] - Recursion depth exceeded')
+        print(f'[fibo_recursivo ERROR] - Recursion depth exceeded')
 
 
 def fibo_memoizacion(n):
@@ -37,7 +37,7 @@ def fibo_memoizacion(n):
 
         return f(n)
     except RecursionError:
-        print(f'[memoizationFib ERROR] - Recursion depth exceeded')
+        print(f'[fibo_memoizacion ERROR] - Recursion depth exceeded')
         return None
 
 
